@@ -1,0 +1,10 @@
+@import "./reset.css";
+@import "./variebles.css";
+@import "./typografia.css";
+@import "./background.css";
+@import "./conteiner.css";
+
+
+body{
+    font-family: var(--font-primary);
+}

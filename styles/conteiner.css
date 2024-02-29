@@ -1,0 +1,11 @@
+.conteiner{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1240px;
+
+}
+
+.conteiner.sm{
+    max-width: 1040px;
+    
+}
