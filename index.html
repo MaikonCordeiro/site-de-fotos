@@ -8,54 +8,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/pages/pages/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>My Photos - Home</title>
 
 </head>
 
 <body>
-    <header class="background-black">
+    <header class="header background-black">
         <div class="conteiner">
-            <img src="./assets/LogoMyPhotos.png" alt="Logo My Photos Branca">
-            <nav>
-                <ul>
-                    <li>
-                        <a class="menu-item" href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a class="menu-item" href="contato.html">Contato</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="flex">
+                <img src="./assets/MyPhotos (2).png" alt="Logo My Photos Branca">
+                <nav>
+                    <ul>
+                        <li>
+                            <a class="menu-item" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="menu-item" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
         </div>
 
     </header>
 
     <main>
-        <section>
-            <ul>
-                <li>
-                    <img src="./assets/foto1.jpg" alt="gato malhado deitado com olhos fechados" />
-                </li>
-                <li>
-                    <img src="./assets/foto2.jpg" alt="maquina fotografica" />
-                </li>
-            </ul>
-        </section>
-        <section class="background-white">
-            <div class="conteiner">
-                <h2 class="title">Sobre</h2>
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mauris nunc,
-                    imperdiet eu
-                    euismod vel,
-                    eleifend id sem. Vestibulum id blandit lorem, eget vehicula leo. Nulla scelerisque lectus vel nulla
-                    lobortis lacinia. Suspendisse potenti. Proin libero urna, mollis non commodo quis, ultricies in
-                    nibh.
-                    Etiam lobortis mauris id varius tempus. Praesent sit amet feugiat justo. Nunc sollicitudin dui vitae
-                    tincidunt tincidunt. Etiam vitae gravida orci.</p>
+        <section class="sliderSection">
+            <div id="bannerSwiper" class="swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <img src="./assets/foto1.jpg" alt="gato malhado deitado com olhos fechados" />
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="./assets/foto2.jpg" alt="maquina fotografica" />
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
             </div>
 
         </section>
-        <section class="background-gray">
+        <section class="aboutSection background-white">
+            <div class="conteiner">
+                <div class="flex">
+                    <h2 class="title">Sobre</h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mauris nunc,
+                        imperdiet eu
+                        euismod vel,
+                        eleifend id sem. Vestibulum id blandit lorem, eget vehicula leo. Nulla scelerisque lectus vel
+                        nulla
+                        lobortis lacinia. Suspendisse potenti. Proin libero urna, mollis non commodo quis, ultricies in
+                        nibh.
+                        Etiam lobortis mauris id varius tempus. Praesent sit amet feugiat justo. Nunc sollicitudin dui
+                        vitae
+                        tincidunt tincidunt. Etiam vitae gravida orci.</p>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="galerySection background-gray">
             <div class="conteiner sm">
                 <h2 class="title">Galeria</h2>
                 <ul>
@@ -80,12 +94,29 @@
         </section>
     </main>
 
-    <footer class="background-white">
+    <footer class="footer background-white">
         <div class="conteiner">
-            <img src="./assets/Footer.png" alt="minha logo" />
-            <p class="text bold">Todos os direitos reservados.</p>
+            <div class="flex">
+                <img src="./assets/MyPhotoslogo.png" alt="minha logo" />
+                <p class="text bold">Todos os direitos reservados.</p>
+            </div>
+
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper("#bannerSwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            autoplay: {
+                delay: 4000, disableOnInteraction: false,
+            }
+            }
+        );
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,23 @@
+.aboutSection {
+    padding: 75px 0;
+}
+
+.aboutSection .flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 110px;
+}
+
+@media (max-width: 650px) {
+    .aboutSection .flex {
+        gap: 40px;
+        flex-direction: column;
+    }
+}
+
+/* o que acontece acima é que quando a gente diminui bastante o conteúdo ocorre um grande espaçamento do 
+paragrafo com o título e tabém não fica visualmente bom para ler. Então para corrigir definimos uma ponto 
+de quebra que ali está mostrando quando chegar a 650px o título passa a subir em cima do paragráfo e diminuindo
+gradativamente. Acontecendo assim a responsividade de forma mais eficiente.
+ */

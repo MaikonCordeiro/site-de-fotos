@@ -3,8 +3,17 @@
 @import "./typografia.css";
 @import "./background.css";
 @import "./conteiner.css";
+@import "./header.css";
+@import "./footer.css";
+
+
+
 
 
 body{
     font-family: var(--font-primary);
+}
+
+section{
+    align-items: center;
 }

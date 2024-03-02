@@ -1,0 +1,26 @@
+.galerySection{
+    padding: 75px 0;
+}
+
+.galerySection h2{
+    margin-bottom: 40px;
+}
+
+/* O CSS tem um recurso para lidar com repetições que é a função REPEAT, usa dois parâmetros. 
+Primeiro a qtd e depois oq. */
+
+.galerySection ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 40px;
+    
+
+}
+
+@media (max-width: 650px){
+    .galerySection ul{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        
+    }
+}

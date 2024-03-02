@@ -9,3 +9,7 @@
     max-width: 1040px;
     
 }
+
+.conteiner.xs{
+    max-width: 900px;
+}
